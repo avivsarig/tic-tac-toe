@@ -50,6 +50,10 @@ export const isWin = function () {
       if (SIZE - row + 1 >= SIZE && SIZE - col + 1 >= SIZE)
         flag = isSizeInARow(row, col, 1, 1);
       if (flag) return true;
+
+      if (col >= SIZE && SIZE - row + 1 >= SIZE)
+        flag = isSizeInARow(row, col, 1, -1);
+      if (flag) return true;
     }
   }
   return false;

@@ -47,6 +47,7 @@ const placeMark = function (e) {
   if (isTie()) {
     state.gameDone = true;
     whosTurn.textContent = `It's a draw!`;
+    return;
   }
 
   if (!state.gameDone) switchPlayers();
